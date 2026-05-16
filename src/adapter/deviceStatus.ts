@@ -9,12 +9,12 @@ export async function createDeviceStatusStates(
   adapter: Innoxel,
   data: IDeviceStatusResponse,
 ): Promise<void> {
-  await adapter.extendObjectAsync("deviceStatus", {
+  await adapter.extendObject("deviceStatus", {
     type: "device",
     common: { name: "deviceStatus" },
   });
   const statePromises = Object.keys(data).map((key) => {
-    return adapter.extendObjectAsync(`deviceStatus.${key}`, {
+    return adapter.extendObject(`deviceStatus.${key}`, {
       type: "state",
       common: getCommon(data as IndexableDeviceStatusResponse, key),
     });

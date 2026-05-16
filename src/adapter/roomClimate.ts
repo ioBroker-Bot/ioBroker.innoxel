@@ -8,7 +8,7 @@ export async function createRoomClimateState(
   adapter: Innoxel,
   identity: IModuleRoomClimateIdentity,
 ): Promise<void> {
-  await adapter.extendObjectAsync(`roomClimate.${identity.index}`, {
+  await adapter.extendObject(`roomClimate.${identity.index}`, {
     type: "channel",
     common: { name: identity.name },
   });
@@ -17,8 +17,8 @@ export async function createRoomClimateState(
     name: string,
     type: ioBroker.CommonType,
     common: Partial<ioBroker.StateCommon> = {},
-  ): ReturnType<typeof adapter.extendObjectAsync> =>
-    adapter.extendObjectAsync(`roomClimate.${identity.index}.${name}`, {
+  ): ReturnType<typeof adapter.extendObject> =>
+    adapter.extendObject(`roomClimate.${identity.index}.${name}`, {
       type: "state",
       common: {
         name,

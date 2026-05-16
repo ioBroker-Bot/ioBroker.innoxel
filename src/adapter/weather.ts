@@ -7,14 +7,14 @@ export async function createWeatherStates(
   adapter: Innoxel,
   data: IModuleWeather,
 ): Promise<void> {
-  await adapter.extendObjectAsync("weather", {
+  await adapter.extendObject("weather", {
     type: "device",
     common: { name: "weather" },
   });
   const promises = Object.keys(data).map((key) => {
     if (ignoreProperty(data, key)) return Promise.resolve(null);
 
-    return adapter.extendObjectAsync(`weather.${key}`, {
+    return adapter.extendObject(`weather.${key}`, {
       type: "state",
       common: getCommon(data as IndexableWeatherData, key),
     });

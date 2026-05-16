@@ -38,7 +38,7 @@ export async function createModuleStates(
 
       switch (module.class) {
         case "masterInModule":
-          await adapter.extendObjectAsync(
+          await adapter.extendObject(
             `moduleIn.${moduleIndex}.${channel.index}.button`,
             {
               type: "state",
@@ -51,7 +51,7 @@ export async function createModuleStates(
               },
             },
           );
-          return adapter.extendObjectAsync(
+          return adapter.extendObject(
             `moduleIn.${moduleIndex}.${channel.index}.ledState`,
             {
               type: "state",
@@ -66,7 +66,7 @@ export async function createModuleStates(
             },
           );
         case "masterOutModule":
-          await adapter.extendObjectAsync(
+          await adapter.extendObject(
             `moduleOut.${moduleIndex}.${channel.index}.button`,
             {
               type: "state",
@@ -79,7 +79,7 @@ export async function createModuleStates(
               },
             },
           );
-          return adapter.extendObjectAsync(
+          return adapter.extendObject(
             `moduleOut.${moduleIndex}.${channel.index}.outState`,
             {
               type: "state",
@@ -94,7 +94,7 @@ export async function createModuleStates(
             },
           );
         case "masterDimModule":
-          await adapter.extendObjectAsync(
+          await adapter.extendObject(
             `moduleDim.${moduleIndex}.${channel.index}.button`,
             {
               type: "state",
@@ -107,7 +107,7 @@ export async function createModuleStates(
               },
             },
           );
-          return adapter.extendObjectAsync(
+          return adapter.extendObject(
             `moduleDim.${moduleIndex}.${channel.index}.outState`,
             {
               type: "state",

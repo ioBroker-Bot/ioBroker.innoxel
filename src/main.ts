@@ -69,7 +69,7 @@ export class Innoxel extends utils.Adapter {
     );
 
     // Reset the connection indicator during startup
-    await this.setStateAsync("info.connection", false, true);
+    await this.setState("info.connection", false, true);
 
     // The adapters config (in the instance object everything under the attribute "native") is accessible via
     // this.config:
@@ -109,7 +109,7 @@ export class Innoxel extends utils.Adapter {
     try {
       await this.reconnect(first);
     } catch (error: unknown) {
-      await this.setStateAsync("info.connection", false, true);
+      await this.setState("info.connection", false, true);
       this.logError(error, "setupConnection");
 
       if (first) {
@@ -124,7 +124,7 @@ export class Innoxel extends utils.Adapter {
   private async reconnect(first?: boolean): Promise<void> {
     this.cleanup();
     await this.updateLastIds(first);
-    await this.setStateAsync("info.connection", true, true);
+    await this.setState("info.connection", true, true);
     this.log.info("Successfully connected to Innoxel Master");
 
     this.stopScheduling = false;

@@ -9,8 +9,8 @@ export async function createOrUpdateIdentities(
 ): Promise<void> {
   adapter.log.debug("Creating/Updating Identities...");
   const devices = ["In", "Out", "Dim"].map(async (type) => {
-    await adapter.extendObjectAsync(`module${type}`, { type: "device" });
-    await adapter.extendObjectAsync(`module${type}`, {
+    await adapter.extendObject(`module${type}`, { type: "device" });
+    await adapter.extendObject(`module${type}`, {
       type: "device",
       common: {
         name: `${type} Modules`,
@@ -20,8 +20,8 @@ export async function createOrUpdateIdentities(
   const otherTypes: Array<[string, string]> = [["roomClimate", "Thermostats"]];
   devices.push(
     ...otherTypes.map(async ([type, name]) => {
-      await adapter.extendObjectAsync(type, { type: "device" });
-      await adapter.extendObjectAsync(type, {
+      await adapter.extendObject(type, { type: "device" });
+      await adapter.extendObject(type, {
         type: "device",
         common: { name },
       });
@@ -57,7 +57,7 @@ async function createOrUpdateIdentity(
   }
   device += `.${identity.index.toString().padStart(3, "0")}`;
 
-  await adapter.extendObjectAsync(device, {
+  await adapter.extendObject(device, {
     type: "device",
     common: { name: identity.name },
   });
@@ -65,7 +65,7 @@ async function createOrUpdateIdentity(
   const channelPromises = asArray(identity.channel)
     .filter((channel) => channel && !channel.noxnetError)
     .map((channel) =>
-      adapter.extendObjectAsync(`${device}.${channel.index}`, {
+      adapter.extendObject(`${device}.${channel.index}`, {
         type: "channel",
         common: {
           name: channel.name,
