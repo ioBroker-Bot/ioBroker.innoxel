@@ -1,4 +1,4 @@
-import type InnoxelApi from "innoxel-soap";
+import type { InnoxelApi } from "innoxel-soap";
 
 export interface IHandleMessageResult {
   reloadModules?: boolean;
