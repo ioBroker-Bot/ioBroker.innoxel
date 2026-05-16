@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "innoxel",
-    "version": "2.0.0-beta.0",
+    "version": "2.0.0",
     "news": {
+      "2.0.0": {
+        "en": "implement adapter checker feedback and create-adapter migrations\nAdapter requires node.js >= 22 now\ndependency updates",
+        "de": "adapter-checker-feedback implementieren und adapter-migrationen erstellen\nAdapter benötigt node.js >= 22 jetzt\nabhängigkeitsaktualisierung",
+        "ru": "реализовать обратную связь проверки адаптера и создать миграции адаптации\nАдаптер требует node.js >= 22 сейчас\nобновления зависимостей",
+        "pt": "implementar o feedback do verificador de adaptadores e migrações de adaptadores de criação\nAdaptador requer nod.js >= 22 agora\natualizações de dependência",
+        "nl": "implementeren adapter checker feedback en maken-adapter migraties\nVoor de adapter zijn node.js < 22 nu nodig\nafhankelijkheidsupdates",
+        "fr": "implémenter la rétroaction de l'adaptateur checker et créer des migrations d'adaptation\nAdaptateur nécessite node.js >= 22 maintenant\nmises à jour des dépendances",
+        "it": "implementare l'adattatore checker feedback e creare-adapter migrazioni\nAdattatore richiede node.js >= 22 ora\naggiornamenti di dipendenza",
+        "es": "implementa la retroalimentación del adaptador y crea-adapter migraciones\nAdaptador requiere node.js ю= 22 ahora\nactualizaciones de la dependencia",
+        "pl": "implementuj sprzężenie zwrotne i migracje łącznika\nAdapter wymaga node.js > = 22\naktualizacje zależności",
+        "uk": "реалізація зворотного зв'язку адаптера та створення міграції\nАдаптер вимагає node.js >= 22 тепер\nоновлення залежності",
+        "zh-cn": "执行适配器检查器反馈和创建-适配器迁移\n适配器需要节点.js 现在22\n依赖性更新"
+      },
       "2.0.0-beta.0": {
         "en": "implement adapter checker feedback and create-adapter migrations\nAdapter requires node.js >= 22 now\ndependency updates",
         "de": "adapter-checker-feedback implementieren und adapter-migrationen erstellen\nAdapter benötigt node.js >= 22 jetzt\nabhängigkeitsaktualisierung",
