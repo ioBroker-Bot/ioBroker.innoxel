@@ -17,7 +17,7 @@ export async function createRoomClimateState(
     name: string,
     type: ioBroker.CommonType,
     common: Partial<ioBroker.StateCommon> = {},
-  ): ReturnType<typeof adapter.extendObject> =>
+  ) =>
     adapter.extendObject(`roomClimate.${identity.index}.${name}`, {
       type: "state",
       common: {
